@@ -11,8 +11,17 @@ public class BookController {
 
     @RequestMapping
     public String viewBooks() {
-        return "<p>Books would be displayed here.</p>" +
-            "<p>See <a href='/books/1'>Book 1</a></p>";
+        return
+            "<html>" +
+            "<head>" +
+            "<link rel=\"stylesheet\" type=\"text/css\" href=\"/style.css\">" +
+            "</head>" +
+            "<body>" +
+            "<h1>Recommended books</h1>" +
+            "<p>Books would be displayed here.</p>" +
+            "<p>See <a href='/books/1'>Book 1</a></p>" +
+            "</body>" +
+            "</html>";
     }
 
     @RequestMapping("/{id}")
